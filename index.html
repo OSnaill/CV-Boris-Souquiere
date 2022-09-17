@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,57 +11,66 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
     <!-- On déclare nos links tailwind css avant notre style.css -->
     <link rel="stylesheet" href="./assets/css/tailwind/output.css">
     <link rel="stylesheet" href="./assets/css/tailwind/input.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <div id="app" class="app-container">
         <div class="laptop:w-3/5">
-        <header class="profil-card">
-            <div class="nav-mobile">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 absolute" v-if="isNavActive==false" @Click="openNav">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-                <nav class="side-nav"  v-if="isNavActive">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 absolute" v-if="isNavActive" @Click="closeNav">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <header class="profil-card">
+                <div class="nav-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-8 h-8 absolute" v-if="isNavActive==false" @Click="openNav">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
-                    <div class="side-nav-list">
-                        <button class="nav-button" @Click="show = 1">Présentation</button>
-                        <button class="nav-button" @Click="show = 2">Experience</button>
-                        <button class="nav-button" @Click="show = 3">Formation</button>
-                        <button class="nav-button" @Click="show = 4">Projets Perso</button>
-                    </div>
-                </nav>
-            </div>
-            <div class="w-full flex flex-col justify-center p-4">
-                <div class="m-auto">
-                    <img class="w-32 h-32 laptop:w-52 laptop:h-52 rounded-full object-cover object-left-top" src="./assets/img/boris_photo.jpg" alt="photo-boris">
-                    <h2 class="primary-title text-center">Souquière Boris</h2>
-                </div>
-                <div class=" p-5 text-center w-72 m-auto">
-                    <h1 class="primary-title text-sm laptop:text-lg m-auto"> Contacts</h1>
-                    <div class="flex flex-rows flex-around">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    <nav class="side-nav" v-if="isNavActive">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8 absolute" v-if="isNavActive" @Click="closeNav">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
-                        <p class="pl-1 text-sm laptop:text-md">osouquiere.boris@gmail.com</p>
+                        <div class="side-nav-list">
+                            <button class="nav-button" @Click="show = 1">Présentation</button>
+                            <button class="nav-button" @Click="show = 2">Experience</button>
+                            <button class="nav-button" @Click="show = 3">Formation</button>
+                            <button class="nav-button" @Click="show = 4">Projets Perso</button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="w-full flex flex-col justify-center p-4">
+                    <div class="m-auto">
+                        <img class="w-32 h-32 laptop:w-52 laptop:h-52 rounded-full object-cover object-left-top"
+                            src="./assets/img/boris_photo.jpg" alt="photo-boris">
+                        <h2 class="primary-title text-center">Souquière Boris</h2>
                     </div>
-                    <div class="flex flex-rows flex-around">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                        </svg>
-                        <p class="pl-1 text-sm laptop:text-md">06.33.53.86.11</p>
+                    <div class=" p-5 text-center w-72 m-auto">
+                        <h1 class="primary-title text-sm laptop:text-lg m-auto"> Contacts</h1>
+                        <div class="flex flex-rows flex-around">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                            <p class="pl-1 text-sm laptop:text-md">osouquiere.boris@gmail.com</p>
+                        </div>
+                        <div class="flex flex-rows flex-around">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                            </svg>
+                            <p class="pl-1 text-sm laptop:text-md">06.33.53.86.11</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
         </div>
-        <article class="w-full laptop:h-full laptop:bg-emerald-200 laptop:overflow-y-auto">
+        <article class="w-full laptop:h-full laptop:bg-sky-900 laptop:overflow-y-auto">
             <nav class="nav-desktop">
                 <button class="nav-button" @Click="show = 1">Présentation</button>
                 <button class="nav-button" @Click="show = 2">Experience</button>
@@ -68,120 +78,126 @@
                 <button class="nav-button" @Click="show = 4">Projets Perso</button>
             </nav>
 
-                <div v-if="show == 1"  class="article-container presentation">
-                    <section class="article-section">
-                        <h3 class="secondary-title text-3xl">Présententation</h3>
-                        <p class="article-text">
-                            Bonjour, </br>
-                            Je suis à la recherche d'une alternance en Développement Web afin de 
-                            préparer le titre professionnel Concepteur Développeur d'Application (titre de niveau 6 au RNCP)
-                            pour au plus tard le 03 Octobre 2022. </br>
-                            Type de contrat : Contrat d'alternance <br>
-                            <strong>Durée </strong>: 16 mois </br>
-                            <strong>Localisation </strong>: Rennes et côtes d'armor <br>
-                            <strong>Rythme </strong>: 1 semaine en cours, 2 semaines en entreprise <br>
-                            Eligible à l'aide à l'alternance de 8000 euros.
-                        </p>
-                    </section>
-                    <section class="article-section">
-                        <h3 class="secondary-title laptop:text-xl mb-10">Compétences</h3>
-                        <div class="grid grid-cols-4 mt-2 laptop:grid-cols-5 laptop:w-3/4 laptop:m-auto">
-                            <img src="./assets/img/html.svg" alt="" class="skill-list-image">
-                            <img src="./assets/img/css.svg.png" alt="" class="skill-list-image">
-                            <img src="./assets/img/javascript.svg" alt="" class="skill-list-image">
-                            <img src="./assets/img/php.png" alt="" class="skill-list-image">
-                            <img src="./assets/img/tailwind.svg" alt="" class="skill-list-image">
-                            <img src="./assets/img/symfony.svg" alt="" class="skill-list-image">
-                            <img src="./assets/img/vue.png" alt="" class="skill-list-image">
-                        </div>
-                    </section>
-                </div>
-                <div v-if="show == 2" class="experience article-container">
-                    <h3 class="secondary-title text-3xl">Experiences</h3>
-                    <div class="article-text">
-                        <h2 class="article-title">O'Clock - Projet d'apothéose | 08 aout 2022 - 08 septembre 2022</h2>
-                        <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
-                            <li>Projet en équipe de 4 ( 2 back 2 front )</li>
-                            <li>Product Owner - Dévelopeur Symfony - Intégrateur TailwindCSS</li>
-                            <li>Développement d'un réseau social pour musicien</li>
-                            <li>Travail en méthodologie Scrum</li>
-                            <li>Versionning via Git</li>
-                            <li>Mise en place du cahier des charges + documents relatifs (MCD, Wireframe)</li>
-                            <li>Technologies utilisées : Symfony, API REST, TailwindCSS</li>
-                            <li>
-                                Mise en place de la BDD et de ses entités - Programamtion orientée objet via l'ORM Doctrine
-                                - création du système d'ami et de groupe, dynamisation graphique d'acceptation et refus de requête via JavaScript -
-                                Integration TailwindCSS - mise en API REST des données - Sécurisation via JWT token
-                            </li>
-                        </ul>
-                        <br>
-                        <p> Vidéo de présentaiton de projets de la promotion DeVinci Blue</p>
-                        <strong> Projet : OneBand <br> Début : 6 min 30</strong>
-                        <iframe width="1280" height="720" start="200" src="https://www.youtube.com/embed/qHfnq1mhgsk" title="La promotion De Vinci Blue présente ses projets de fin de formation !" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" class="youtube-video" allowfullscreen></iframe>
+            <div v-if="show == 1" class="article-container presentation">
+                <section class="article-section">
+                    <h3 class="secondary-title text-3xl">Présententation</h3>
+                    <p class="article-text">
+                        Bonjour, </br>
+                        Je suis à la recherche d'une alternance en Développement Web afin de
+                        préparer le titre professionnel Concepteur Développeur d'Application (titre de niveau 6 au RNCP)
+                        pour au plus tard le 03 Octobre 2022. </br>
+                        Type de contrat : Contrat d'alternance <br>
+                        <strong>Durée </strong>: 16 mois </br>
+                        <strong>Localisation </strong>: Rennes et côtes d'armor <br>
+                        <strong>Rythme </strong>: 1 semaine en cours, 2 semaines en entreprise <br>
+                        Eligible à l'aide à l'alternance de 8000 euros.
+                    </p>
+                </section>
+                <section class="article-section">
+                    <h3 class="secondary-title laptop:text-xl mb-10">Compétences</h3>
+                    <div class="grid grid-cols-4 mt-2 laptop:grid-cols-5 laptop:w-3/4 laptop:m-auto">
+                        <img src="./assets/img/html.svg" alt="" class="skill-list-image">
+                        <img src="./assets/img/css.svg.png" alt="" class="skill-list-image">
+                        <img src="./assets/img/javascript.svg" alt="" class="skill-list-image">
+                        <img src="./assets/img/php.png" alt="" class="skill-list-image">
+                        <img src="./assets/img/tailwind.svg" alt="" class="skill-list-image">
+                        <img src="./assets/img/symfony.svg" alt="" class="skill-list-image">
+                        <img src="./assets/img/vue.png" alt="" class="skill-list-image">
                     </div>
-                </div>
-                <div v-if="show == 3" class="experience article-container">
-                    <h3 class="secondary-title text-3xl">Formations</h3>
-                    <section class="article-section">
-                        <div class="article-text">
-                            <h2 class="article-title">Udemy - Apprentissage VueJs | septembre 2022 - en cours</h2>
-                            <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
-                                <li>10 heures de vidéo</li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section class="article-section">
-                        <div class="article-text">
-                            <h2 class="article-title">O'Clock - Développeur Web et Web mobile | 08 mars 2022 - 08 septembre 2022</h2>
-                            <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
-                                <li>Ecole du Grand Numérique</li>
-                                <li>Formation intense de 798h</li>
-                                <li>Spécialisation symfony avec 1 mois intensif de pratique</li>
-                                <li>Projet d'apothéose d'un mois en équipe</li>
-                                <li>Pratique intesive HTML/CSS/PHP/Javascript</li>
-                                <li>
-                                    Initiation à Laravel - WordPress - API Rest - AJAX - architecture MVC -  Mobile First -
-                                    Déploiement de projet - Sécurité - SEO - Bootstrap - Git
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section class="article-section">
-                        <div class="article-text">
-                            <h2 class="article-title">ENP Saint-Malo - Formation Adjoint de sécurité | 08 décembre 2018 - 08 mars 2019</h2>
-                            <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
-                                <li>Obtention du titre Adjoint de Sécurité Intérieure</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-                <div v-if="show == 4" class="experience article-container">
-                    <h3 class="secondary-title text-3xl">Projets Perso</h3>
-                    <section class="article-section">
-                        <div class="article-text">
-                            <h2 class="article-title"> CV en ligne | septembre 2022</h2>
-                            <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
-                                <li>Vous êtes en train de le visionner :D</li>
-                            </ul>
-                        </div>
-                    </section>
+                </section>
+            </div>
+            <div v-if="show == 2" class="experience article-container">
+                <h3 class="secondary-title text-3xl">Experiences</h3>
+                <div class="article-text">
+                    <h2 class="article-title">O'Clock - Projet d'apothéose | 08 aout 2022 - 08 septembre 2022</h2>
+                    <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
+                        <li>Projet en équipe de 4 ( 2 back 2 front )</li>
+                        <li>Product Owner - Dévelopeur Symfony - Intégrateur TailwindCSS</li>
+                        <li>Développement d'un réseau social pour musicien</li>
+                        <li>Travail en méthodologie Scrum</li>
+                        <li>Versionning via Git</li>
+                        <li>Mise en place du cahier des charges + documents relatifs (MCD, Wireframe)</li>
+                        <li>Technologies utilisées : Symfony, API REST, TailwindCSS</li>
+                        <li>
+                            Mise en place de la BDD et de ses entités - Programamtion orientée objet via l'ORM Doctrine
+                            - création du système d'ami et de groupe, dynamisation graphique d'acceptation et refus de
+                            requête via JavaScript -
+                            Integration TailwindCSS - mise en API REST des données - Sécurisation via JWT token
+                        </li>
+                    </ul>
+                    <br>
+                    <p> Vidéo de présentaiton de projets de la promotion DeVinci Blue</p>
+                    <strong> Projet : OneBand <br> Début : 6 min 30</strong>
+                    <iframe width="1280" height="720" start="200" src="https://www.youtube.com/embed/qHfnq1mhgsk"
+                        title="La promotion De Vinci Blue présente ses projets de fin de formation !" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                        class="youtube-video" allowfullscreen></iframe>
                 </div>
             </div>
-        </article>
+            <div v-if="show == 3" class="experience article-container">
+                <h3 class="secondary-title text-3xl">Formations</h3>
+                <section class="article-section">
+                    <div class="article-text">
+                        <h2 class="article-title">Udemy - Apprentissage VueJs | septembre 2022 - en cours</h2>
+                        <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
+                            <li>10 heures de vidéo</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="article-section">
+                    <div class="article-text">
+                        <h2 class="article-title">O'Clock - Développeur Web et Web mobile | 08 mars 2022 - 08 septembre
+                            2022</h2>
+                        <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
+                            <li>Ecole du Grand Numérique</li>
+                            <li>Formation intense de 798h</li>
+                            <li>Spécialisation symfony avec 1 mois intensif de pratique</li>
+                            <li>Projet d'apothéose d'un mois en équipe</li>
+                            <li>Pratique intesive HTML/CSS/PHP/Javascript</li>
+                            <li>
+                                Initiation à Laravel - WordPress - API Rest - AJAX - architecture MVC - Mobile First -
+                                Déploiement de projet - Sécurité - SEO - Bootstrap - Git
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="article-section">
+                    <div class="article-text">
+                        <h2 class="article-title">ENP Saint-Malo - Formation Adjoint de sécurité | 08 décembre 2018 - 08
+                            mars 2019</h2>
+                        <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
+                            <li>Obtention du titre Adjoint de Sécurité Intérieure</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div v-if="show == 4" class="experience article-container">
+                <h3 class="secondary-title text-3xl">Projets Perso</h3>
+                <section class="article-section">
+                    <div class="article-text">
+                        <h2 class="article-title"> CV en ligne | septembre 2022</h2>
+                        <ul class="text-sm grid grid-cols-1 gap-1 text-left laptop:text-center">
+                            <li>Vous êtes en train de le visionner :D</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+    </div>
+    </article>
     </div>
     <script>
         app = Vue.createApp({
-            data(){
+            data() {
                 return {
-                    isNavActive : false,
+                    isNavActive: false,
                     show: 3,
                 }
             },
             methods: {
-                openNav(){
+                openNav() {
                     this.isNavActive = true;
                 },
-                closeNav(){
+                closeNav() {
                     this.isNavActive = false;
                 }
             }
@@ -189,4 +205,5 @@
         app.mount('#app');
     </script>
 </body>
+
 </html>

@@ -5,7 +5,8 @@
 /* npx tailwindcss -i ./assets/css/tailwind/input.css -o ./assets/css/tailwind/output.css --watch */
 
 body{
-    font-family: 'Patrick Hand';
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
 }
 
 @layer components{
@@ -34,16 +35,18 @@ body{
     /* ---- nav ---- */
 
     .nav-button{
-        @apply hover:text-green-500
+        @apply text-sky-200 hover:text-sky-50
     }
     /* phone-nav */
     .side-nav{
-        @apply absolute bg-emerald-900 h-screen w-2/3 opacity-90 text-emerald-200
+        @apply absolute bg-sky-900 h-screen w-2/3 opacity-90 text-sky-200
     }
 
     .side-nav-list{
         @apply flex flex-col justify-around mt-10 h-1/3 text-xl
     }
+
+
 
     /* desktop-nav */
 
@@ -53,7 +56,7 @@ body{
     /* ---- article ---- */
 
     .article-container{
-        @apply w-full text-center p-5 bg-emerald-200 text-emerald-600
+        @apply w-full text-center p-5 bg-sky-900 text-sky-200
     }
 
     .article-section{
@@ -72,7 +75,7 @@ body{
     /* ---- footer ---- */
 
     .footer-container{
-        @apply w-full bg-emerald-800 flex flex-col items-center text-emerald-50 h-1/6 fixed bottom-0
+        @apply w-full bg-sky-800 flex flex-col items-center text-sky-20 h-1/6 fixed bottom-0
     }
 
     @screen tablet{
@@ -99,11 +102,11 @@ body{
         }
 
         .nav-desktop{
-            @apply block w-full flex flex-row bg-emerald-300 justify-around
+            @apply block w-full flex flex-row bg-sky-800 justify-around
         }
 
         .nav-button{
-            @apply w-full hover:bg-emerald-900 p-1 duration-100
+            @apply w-full hover:bg-sky-900 p-1 duration-100 hover:text-sky-50
         }
 
         .youtube-video{

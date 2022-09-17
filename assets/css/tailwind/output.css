@@ -588,9 +588,14 @@ video {
 
 /* ---- nav ---- */
 
+.nav-button {
+  --tw-text-opacity: 1;
+  color: rgb(186 230 253 / var(--tw-text-opacity));
+}
+
 .nav-button:hover {
   --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
+  color: rgb(240 249 255 / var(--tw-text-opacity));
 }
 
 /* phone-nav */
@@ -600,9 +605,9 @@ video {
   height: 100vh;
   width: 66.666667%;
   --tw-bg-opacity: 1;
-  background-color: rgb(6 78 59 / var(--tw-bg-opacity));
+  background-color: rgb(12 74 110 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(167 243 208 / var(--tw-text-opacity));
+  color: rgb(186 230 253 / var(--tw-text-opacity));
   opacity: 0.9;
 }
 
@@ -627,11 +632,11 @@ video {
 .article-container {
   width: 100%;
   --tw-bg-opacity: 1;
-  background-color: rgb(167 243 208 / var(--tw-bg-opacity));
+  background-color: rgb(12 74 110 / var(--tw-bg-opacity));
   padding: 1.25rem;
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgb(5 150 105 / var(--tw-text-opacity));
+  color: rgb(186 230 253 / var(--tw-text-opacity));
 }
 
 .article-section {
@@ -704,7 +709,7 @@ video {
     flex-direction: row;
     justify-content: space-around;
     --tw-bg-opacity: 1;
-    background-color: rgb(110 231 183 / var(--tw-bg-opacity));
+    background-color: rgb(7 89 133 / var(--tw-bg-opacity));
   }
 
   .nav-button {
@@ -715,7 +720,9 @@ video {
 
   .nav-button:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(6 78 59 / var(--tw-bg-opacity));
+    background-color: rgb(12 74 110 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(240 249 255 / var(--tw-text-opacity));
   }
 
   .youtube-video {
@@ -860,7 +867,8 @@ video {
 /* npx tailwindcss -i ./assets/css/tailwind/input.css -o ./assets/css/tailwind/output.css --watch */
 
 body{
-  font-family: 'Patrick Hand';
+  font-family: 'Montserrat';
+  letter-spacing: 2px;
 }
 
 ::-webkit-scrollbar{
@@ -900,9 +908,9 @@ body{
     overflow-y: auto;
   }
 
-  .laptop\:bg-emerald-200 {
+  .laptop\:bg-sky-900 {
     --tw-bg-opacity: 1;
-    background-color: rgb(167 243 208 / var(--tw-bg-opacity));
+    background-color: rgb(12 74 110 / var(--tw-bg-opacity));
   }
 
   .laptop\:text-center {
