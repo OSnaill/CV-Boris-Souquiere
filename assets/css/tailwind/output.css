@@ -780,6 +780,14 @@ video {
   height: 1.25rem;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -798,6 +806,14 @@ video {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-20 {
+  width: 5rem;
 }
 
 .grid-cols-4 {
@@ -862,6 +878,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 /* npx tailwindcss -i ./assets/css/tailwind/input.css -o ./assets/css/tailwind/output.css --watch */
